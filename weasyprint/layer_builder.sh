@@ -31,7 +31,7 @@ cp -r /usr/share/mime /opt/lib/mime
 
 export RUNTIME=$(echo $AWS_EXECUTION_ENV | cut -d _ -f 3)
 mkdir -p /opt/python/lib/$RUNTIME/site-packages
-python -m pip install weasyprint -t /opt/python/lib/$RUNTIME/site-packages
+python -m pip install weasyprint jinja2 -t /opt/python/lib/$RUNTIME/site-packages
 
 # fix dlopen(3) calls
 cd /opt/python/lib/$RUNTIME/site-packages
